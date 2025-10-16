@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banh_Pudding_SWEET_TREAT_Bakery</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #fce4ec, #d7f6fa);
+        margin: auto;
+        font-family: monospace;
+      }
+      ul.menu {
+        list-style-type: none;
+        margin: -20px;
+        display: flex;
+        justify-content: center; /* Căn giữa toàn bộ menu */
+        align-items: center; /* (tuỳ chọn) Căn giữa theo chiều dọc */
+        overflow: hidden;
+        color: rgb(19, 76, 95);
+      }
+      ul.menu li {
+        padding: 30px;
+      }
+      body {
+        align-content: center;
+      }
+      fieldset {
+        text-align: left;
+        width: 500px; /* cố định chiều ngang */
+      }
+      table {
+        width: 100%;
+        justify-content: center; /* căn giữa */
+      }
+      form {
+        background-color: white;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input {
+        width: 80%;
+        padding: 12px 18px;
+        margin: 10px 0;
+        border: 1.5px solid #d7f6fa;
+        border-radius: 25px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+    </style>
+    <!-- Sử dụng Font Awesome (CDN mới nhất) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Biểu tượng Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- Biểu tượng Google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header>
+      <h4
+        style="
+          background-color: rgb(19, 76, 95);
+          text-align: center;
+          color: white;
+          margin: 0%;
+        "
+      >
+        SWEET TREAT Bakery - Hotline: 9999999999
+      </h4>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 80px;
+        "
+      >
+        <!-- Logo -->
+        <div>
+          <img
+            src="Images/logo.png"
+            alt="Logo"
+            style="width: 150px; height: 130px; margin-top: -10px"
+          />
+        </div>
+
+        <!-- Thanh tìm kiếm -->
+        <div style="display: flex; align-items: center; gap: 10px">
+          <input
+            type="search"
+            name="csearch"
+            id="csearch"
+            placeholder="Tìm kiếm sản phẩm..."
+            style="
+              width: 400px;
+              height: 45px;
+              border: 1px solid #ccc;
+              border-radius: 25px;
+              padding: 0 15px;
+              font-size: 16px;
+              outline: none;
+            "
+          />
+          <button
+            type="submit"
+            style="
+              width: 45px;
+              height: 45px;
+              border: none;
+              background-color: #ff6600;
+              color: white;
+              border-radius: 50%;
+              cursor: pointer;
+            "
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <!-- Đăng nhập / đăng ký -->
+        <div style="font-size: 16px">
+          <i
+            class="fa-solid fa-user"
+            style="font-size: 28px; vertical-align: middle"
+          ></i>
+          <a
+            href="#"
+            style="
+              margin-left: 8px;
+              text-decoration: none;
+              color: rgb(19, 76, 95);
+            "
+            >Đăng nhập</a
+          >
+          <span style="margin: 0 5px; color: #888">/</span>
+          <a href="#" style="text-decoration: none; color: rgb(19, 76, 95)"
+            >Đăng ký</a
+          >
+        </div>
+      </div>
+      <ul class="menu" style="font-size: larger">
+        <li><a href="">Trang chủ</a></li>
+        <li><a href="">Sản phẩm</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Tin tức & khuyến mại</a></li>
+      </ul>
+
+      <hr
+        style="border-color: rgb(243, 191, 193); margin-top: 0; padding: 10px"
+      />
+    </header>
+    <main>
+      <div style="display: flex">
+        <div style="width: max-content; flex: 0 0 40%">
+          <div
+            style="
+              border-style: solid;
+              text-align: center;
+              margin-left: 10%;
+              margin-right: 50%;
+              border-color: rgb(243, 191, 193);
+              border-width: 0.5px;
+            "
+          >
+            <h3>BÀI VIẾT MỚI NHẤT</h3>
+            <hr style="border: 1px solid black; width: 80%; margin-top: -3%" />
+
+            <div style="display: flex; margin-left: 10%">
+              <img
+                src="Images/spkhuyenmai1.jpg"
+                style="width: 60px; height: 60px; margin-top: 3%"
+              />
+              <div>
+                <a href="#"><h4>Bánh Kem Ốc Mát Lạnh Đón Hè!</h4></a>
+                <a href="#"><h5>SWEET TREAT Bakery</h5></a>
+                <h4>02.06.2025</h4>
+              </div>
+            </div>
+            <div style="display: flex; margin-left: 10%">
+              <img
+                src="Images/spkhuyenmai2.jpg"
+                style="width: 60px; height: 60px; margin-top: 3%"
+              />
+              <div>
+                <a href="#"
+                  ><h4>
+                    Flan Pudding SWEET TREAT Bakery: Ngọt ngào tan chảy trong
+                    từng muỗng
+                  </h4></a
+                >
+                <a href="#"><h5>SWEET TREAT Bakery</h5></a>
+                <h4>18.02.2025</h4>
+              </div>
+            </div>
+            <div style="display: flex; margin-left: 10%">
+              <img
+                src="Images/spkhuyenmai3.jpg"
+                style="width: 60px; height: 60px; margin-top: 3%"
+              />
+              <div>
+                <a href="#"
+                  ><h4>
+                    Pate Chaud: Bữa sáng tinh tế, khởi đầu ngày mới hứng khởi
+                  </h4></a
+                >
+                <a href="#"><h5>SWEET TREAT Bakery</h5></a>
+                <h4>16.02.2025</h4>
+              </div>
+            </div>
+            <div style="display: flex; margin-left: 10%">
+              <img
+                src="Images/spkhuyenmai4.jpg"
+                style="width: 60px; height: 60px; margin-top: 3%"
+              />
+              <div>
+                <a href="#"
+                  ><h4>
+                    Valentine này tặng gì cho người yêu vừa xinh, vừa ngon, lại
+                    vừa yêu?
+                  </h4></a
+                >
+                <a href="#"><h5>SWEET TREAT Bakery</h5></a>
+                <h4>13.02.2025</h4>
+              </div>
+            </div>
+            <div style="display: flex; margin-left: 10%">
+              <img
+                src="Images/spkhuyenmai5.jpg"
+                style="width: 60px; height: 60px; margin-top: 3%"
+              />
+              <div>
+                <a href="#"><h4>Quà Tết ngọt ngào từ SWEET TREAT Bakery</h4></a>
+                <a href="#"><h5>SWEET TREAT Bakery</h5></a>
+                <h4>23.01.2025</h4>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div
+            style="
+              border-style: solid;
+              text-align: left;
+              margin-left: 10%;
+              margin-right: 50%;
+              border-color: rgb(243, 191, 193);
+              border-width: 0.5px;
+            "
+          >
+            <h3 style="text-align: center">DANH MỤC BLOG</h3>
+            <hr style="border: 1px solid black; width: 80%; margin-top: -3%" />
+            <ul style="font-size: larger; list-style-type: none">
+              <li><a href="">Trang chủ</a></li>
+              <li><a href="">Sản phẩm</a></li>
+              <li><a href="">Giới thiệu</a></li>
+              <li><a href="">Tin tức & khuyến mại</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          style="
+            flex: 0 0 60%;
+            margin-left: -15%;
+            margin-right: 10%;
+            width: max-content;
+          "
+        >
+          <img
+            src="Images/spkhuyenmai2.jpg"
+            style="width: 780px; height: 800px"
+          />
+          <h3>Flan Pudding SWEET TREAT Bakery: Càng ăn càng cuốn</h3>
+          <h5 style="color: #888">
+            Người viết: SWEET TREAT Bakery lúc 18.02.2025
+          </h5>
+          <h4>
+            Flan Pudding từ SWEET TREAT Bakery là một món tráng miệng độc đáo,
+            kết hợp tinh tế giữa lớp gato mềm ẩm và lớp flan mịn mượt, cùng với
+            phần sốt caramen ngào ngạt, mang đến trải nghiệm ẩm thực khó quên.
+          </h4>
+          <h3>Điểm nhấn đặc biệt của Flan Pudding SWEET TREAT Bakery</h3>
+          <ul>
+            <li>
+              <h4>
+                <b>Lớp gato mềm ẩm:</b>Lớp gato được làm từ nguyên liệu tươi
+                ngon, mềm mại và xốp mịn, tan chảy trong miệng, tạo nên sự cân
+                bằng hoàn hảo với lớp flan.
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <b>Lớp flan mịn mượt: </b>Lớp flan được chế biến tỉ mỉ, mịn màng
+                như nhung, béo ngậy và thơm lừng, mang đến cảm giác thư thái và
+                dễ chịu.
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <b>Sốt caramen ngào ngạt:</b>Phần sốt caramen được làm từ đường
+                và nước, có vị ngọt đắng nhẹ nhàng, quyện vào lớp flan, tạo nên
+                hương vị đặc trưng và hấp dẫn.
+              </h4>
+            </li>
+          </ul>
+          <img
+            src="Images/spkhuyenmai6.jpg"
+            style="width: 780px; height: 800px"
+          />
+          <h3>Hương vị đa dạng, lựa chọn phong phú</h3>
+          <h4>
+            Flan Pudding Nguyễn Sơn Bakery có hai hương vị đặc biệt để bạn lựa
+            chọn:
+          </h4>
+          <h4>
+            <ul>
+              <li>
+                <b>Flan Pudding Matcha: </b>Hương vị matcha thanh mát, thơm
+                lừng, kết hợp hài hòa với lớp flan béo ngậy, mang đến trải
+                nghiệm ẩm thực tinh tế và độc đáo.
+              </li>
+              <li>
+                <b>lan Pudding Chocolate:</b>Hương vị chocolate đậm đà, ngọt
+                ngào, làm say lòng những người yêu thích chocolate, đặc biệt phù
+                hợp cho những ai muốn thưởng thức một món tráng miệng ngọt ngào
+                và đầy năng lượng.
+              </li>
+            </ul>
+          </h4>
+          <h4>
+            Nguyễn Sơn Bakery luôn đặt chất lượng lên hàng đầu. Flan Pudding
+            được chế biến từ nguyên liệu tươi ngon, chọn lọc kỹ càng, đảm bảo an
+            toàn vệ sinh thực phẩm và hương vị tuyệt hảo. Đội ngũ thợ bánh
+            chuyên nghiệp của chúng tôi luôn tận tâm và sáng tạo để mang đến cho
+            bạn những sản phẩm chất lượng nhất.
+          </h4>
+          <h4>
+            Flan Pudding Nguyễn Sơn Bakery là món tráng miệng lý tưởng cho những
+            buổi trà chiều thư giãn, những dịp đặc biệt hoặc đơn giản là để
+            thưởng thức sau bữa ăn. Với hương vị độc đáo và sự kết hợp hoàn hảo
+            giữa các thành phần, Flan Pudding Nguyễn Sơn Bakery sẽ làm hài lòng
+            ngay cả những thực khách khó tính nhất.
+          </h4>
+          <h4>
+            Để thưởng thức Flan Pudding Nguyễn Sơn Bakery, quý khách có thể ghé
+            thăm cửa hàng của chúng tôi hoặc đặt hàng trực tuyến qua website
+            hoặc fanpage. Chúng tôi luôn sẵn sàng phục vụ và mang đến cho bạn
+            những trải nghiệm ẩm thực tuyệt vời nhất.
+          </h4>
+          <hr
+            style="
+              border-color: rgb(243, 191, 193);
+              margin-top: 0;
+              padding: 10px;
+            "
+          />
+          <h4>SWEER TREAT BAKERY</h4>
+          <h4>Hotline: 9999.999999</h4>
+          <h4>
+            Fanpage:
+            <a href="#">https://www.facebook.com/sweettrearbakerypage</a>
+          </h4>
+          <h4>Website: <a href="">https://sweattreat.vn/</a></h4>
+          <h4>Email: info@sweattreat.vn</h4>
+          <br />
+          <div style="display: flex; justify-content: space-between">
+            <h4>
+              <a href=""><i class="fa-solid fa-arrow-left"></i> BÀI TRƯỚC</a>
+            </h4>
+            <h4>
+              <a href="">BÀI SAU <i class="fa-solid fa-arrow-right"></i></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <br />
+      <hr style="border-color: rgb(243, 191, 193); margin-top: 0" />
+      <div style="display: flex; justify-content: center">
+        <div style="width: 35%">
+          <b>Giới thiệu</b>
+          <br />
+          Chào mừng bạn đến với Sweet Treat – thiên đường nhỏ dành cho những ai
+          yêu vị ngọt và hương thơm của những chiếc bánh tươi mỗi ngày. Tại
+          Sweet Treat, chúng tôi tin rằng mỗi chiếc bánh không chỉ là món ăn, mà
+          còn là một món quà của cảm xúc, được gửi gắm bằng sự tỉ mỉ và đam mê.
+          Từ những chiếc cupcake mềm mịn, bánh kem tinh tế, đến bánh quy giòn
+          tan, tất cả đều được làm thủ công từ nguyên liệu tươi sạch, an toàn,
+          mang đến hương vị ngọt ngào nhưng không ngấy – chuẩn vị yêu thương.
+          Hãy ghé Sweet Treat để thưởng thức vị ngọt dịu dàng, tận hưởng không
+          gian ấm áp, và tìm thấy một chút “ngọt ngào cho tâm hồn” nhé 💕
+        </div>
+        <div style="width: 20%">
+          <ul style="list-style-type: none">
+            <b>Liên kết</b
+            ><br />
+            <li><a href="">Giới thiệu</a></li>
+            <li><a href="">Chính sách bảo mật & Điều khoản sử dụng</a></li>
+            <li><a href="">Chính sách chất lượng ATTP</a></li>
+            <li><a href="">Bán hàng</a></li>
+            <li><a href="">Thanh toán</a></li>
+            <li><a href="">Chính sách đổi trả</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <li><a href="">Sản phẩm</a></li>
+            <li><a href="">Liên hệ với chúng tôi</a></li>
+          </ul>
+        </div>
+        <div style="width: 20%">
+          <b>CÔNG TY CỔ PHẦN DỊCH VỤ THƯƠNG MẠI SẢN XUẤT SHT</b><br />
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Số 15, hẻm 76 ngách 51, ngõ Linh Quang, phường Văn Miếu - Quốc Tử
+            Giám, Hà Nội
+          </p>
+          <p><i class="fa-solid fa-phone-volume"></i> 02438222228</p>
+          <p><i class="fa-solid fa-phone-volume"></i> 02438222228</p>
+          <p><i class="fa-solid fa-envelope"></i>sweettreatBakery.vn</p>
+        </div>
+        <div>
+          <b>FAN PAGE</b>
+        </div>
+      </div>
+      <hr />
+      <p style="text-align: center">
+        Copyright &copy 2025 <a href="">SWEET TREAT Bakery</a>.
+      </p>
+    </footer>
+  </body>
+</html>
