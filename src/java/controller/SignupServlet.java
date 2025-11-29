@@ -35,7 +35,7 @@ public class SignupServlet extends HttpServlet {
             if (a == null) {
                 // Được phép đăng ký -> Tạo object Customer mới (Address để trống tạm thời)
                 // Lưu ý: Constructor khớp với Model đã sửa ở Bước 2
-                Customer newCus = new Customer(fullname, email, phone, "", password);
+                Customer newCus = new Customer(fullname, email, phone, "", password, "user");
                 dao.insertCustomer(newCus);               
                 response.sendRedirect("index.jsp"); 
             } else {
@@ -45,6 +45,14 @@ public class SignupServlet extends HttpServlet {
         }
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
