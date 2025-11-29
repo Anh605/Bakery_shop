@@ -17,7 +17,7 @@ import model.CartItem;
 @WebServlet("/cart")
 public class CartServlet extends HttpServlet {
 
-    private BanhDAO banhDAO = new BanhDAO();
+    private final BanhDAO banhDAO = new BanhDAO();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -77,10 +77,8 @@ public class CartServlet extends HttpServlet {
     private int parseInt(String raw, int defaultVal) {
         try {
             return Integer.parseInt(raw);
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             return defaultVal;
         }
     }
 }
-
-
