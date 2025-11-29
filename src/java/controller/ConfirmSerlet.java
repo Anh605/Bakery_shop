@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -48,11 +49,12 @@ public class ConfirmSerlet extends HttpServlet {
         try {
             for (CartItem item : cart.values()) {
                 // Insert Booking
-                int bookingId = bookingDAO.insertBooking(customer.getId(), item.getBanh().getId(), item.getQuantity(), note);
+                int bookingId = bookingDAO.insertBooking(customer.getId(), item.getBanh().getId(), item.getQuantity(), note, "Cho xac nhan");
                 
                 if (bookingId != -1) {
                     // Tạo đối tượng Booking để dùng cho Bill và hiển thị
-                    Booking booking = new Booking(bookingId, customer, item.getBanh(), item.getQuantity(), note);
+                    Timestamp now = new Timestamp(System.currentTimeMillis());
+                    Booking booking = new Booking(bookingId, customer, item.getBanh(), item.getQuantity(), note, now, "Cho xac nhan");
                     savedBookings.add(booking);
                     
                     // Insert Bill
@@ -98,7 +100,6 @@ public class ConfirmSerlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
             response.sendRedirect("booknow.jsp?error=SystemError");
         }
     }
