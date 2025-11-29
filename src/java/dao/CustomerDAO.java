@@ -6,6 +6,7 @@ package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import model.Customer;
 
@@ -29,11 +30,11 @@ public class CustomerDAO extends DAO {
                         rs.getString("email"),
                         rs.getString("tel"),
                         rs.getString("address"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("role")
                 );
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
         }
         return null;
     }
@@ -52,24 +53,25 @@ public class CustomerDAO extends DAO {
                         rs.getString("email"),
                         rs.getString("tel"),
                         rs.getString("address"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("role")
                 );
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
         }
         return null;
     }
     // Thêm khách hàng mới, trả về id của khách hàng vừa thêm
     public int insertCustomer(Customer cus) {
         try {
-            String sql = "INSERT INTO customers (customerName, email, tel, address, password) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO customers (customerName, email, tel, address, password, role) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, cus.getName());
             ps.setString(2, cus.getEmail());
             ps.setString(3, cus.getTel());
             ps.setString(4, cus.getAddress());
             ps.setString(5, cus.getPassword());
+            ps.setString(6, cus.getRole());
 
             int cnt = ps.executeUpdate();
             if (cnt > 0) {
@@ -79,8 +81,7 @@ public class CustomerDAO extends DAO {
                 }
             }
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (SQLException ex) {
         }
         return -1; 
     }
@@ -96,14 +97,25 @@ public class CustomerDAO extends DAO {
                         rs.getString("email"),
                         rs.getString("tel"),
                         rs.getString("address"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("role")
                 );
                 cus.setId(rs.getInt("customerId"));
                 return cus;
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (SQLException ex) {
         }
         return null;
     }
+    // Cập nhật địa chỉ của khách hàng
+    public void updateAddress(int customerId, String address) {
+        String sql = "UPDATE customers SET address = ? WHERE customerId = ?";
+        try (PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setString(1, address);
+            ps.setInt(2, customerId);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
 }
