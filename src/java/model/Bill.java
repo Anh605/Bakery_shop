@@ -25,6 +25,9 @@ public class Bill {
         this.totalPrice = totalPrice;
     }
 
+    public Bill() {
+    }
+
     public int getId() {
         return id;
     }
@@ -49,7 +52,11 @@ public class Bill {
         this.totalPrice = totalPrice;
     }
 
-
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString() {
         return "Bill ID=" + id +
                ", BookingID=" + (booking != null ? booking.getId() : "null") +
