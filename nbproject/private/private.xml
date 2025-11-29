@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/dao/DAO.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/CartServlet.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/model/CartItem.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/web/cart.jsp</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/database/csdl.sql</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/model/Booking.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/dao/BookingDAO.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/model/Bill.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/BookServlet.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/ConfirmSerlet.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/web/booknow.jsp</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/web/bookconfirm.jsp</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/BanhListServLet.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/SignupServlet.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/dao/CustomerDAO.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/model/Banh.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/dao/BillDAO.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/dao/BanhDAO.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/getDetailAjax.java</file>
+            <file>file:/C:/Users/Admin/Downloads/Bakery_shopinout/src/java/controller/LogoutServlet.java</file>
+        </group>
+    </open-files>
+</project-private>

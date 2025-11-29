@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sugar & Smile</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Khai báo màu chủ đạo */
+      :root {
+        --primary-color: #b99365; /* Màu vàng nâu bánh nướng */
+        --primary-hover: #a37e53;
+      }
+    </style>
+  </head>
+  <body>
+      <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.jsp">Sugar & Smile</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarsExample05"
+            aria-controls="navbarsExample05"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse navbar-light"
+            id="navbarsExample05"
+          >
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.jsp">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="banhlist">Bánh</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.jsp">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.jsp">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart">Giỏ hàng</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a 
+                  class="nav-link active dropdown-toggle" 
+                  href="login.html" 
+                  id="navbarDropdown" 
+                  role="button" 
+                  data-toggle="dropdown" 
+                  aria-haspopup="true" 
+                  aria-expanded="false"
+                >
+                  Tài khoản
+                </a>
+  
+                <div class="dropdown-menu dropdown-menu-right login-dropdown" aria-labelledby="navbarDropdown">
+                  <form class="px-2 py-2" action="login" method="post">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Email/Tên đăng nhập</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Mật khẩu</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-check mb-3">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Ghi nhớ tôi
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                  </form>
+
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-primary" href="dangky.html">Chưa có tài khoản? Đăng ký ngay</a>
+                  <a class="dropdown-item small" href="#">Quên mật khẩu?</a>
+                </div>
+              </li>   
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+    <section
+      class="site-hero site-hero-innerpage overlay"
+      data-stellar-background-ratio="0.5"
+      style="
+        background-image: url(https://shopbanghe.vn/wp-content/uploads/2021/06/thi%E1%BA%BFt-k%E1%BA%BF-n%E1%BB%99i-th%E1%BA%A5t-c%E1%BB%ADa-h%C3%A0ng-b%C3%A1nh-ng%E1%BB%8Dt-2.jpg);
+      "
+    >
+      <div class="container">
+        <div
+          class="row align-items-center site-hero-inner justify-content-center"
+        >
+          <div class="col-md-12 text-center">
+            <div class="mb-5 element-animate">
+              <h1>Đăng ký tài khoản</h1>
+              <p>Trở thành thành viên để nhận nhiều ưu đãi ngọt ngào!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+    
+<!--    <section class="login-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6"> 
+            
+            <div class="card login-card p-4 p-md-5">
+              
+              <div class="login-header text-center mb-5">
+                <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                <p class="text-muted">Hãy điền thông tin để tham gia cùng chúng tôi</p>
+              </div>
+
+              <form action="" method="post">
+                
+                <div class="form-group">
+                  <input type="text" class="form-control" name="fullname" placeholder="Họ và tên của bạn" required>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" required>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại liên lạc">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="re-password" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-4 terms-container">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="terms" required>
+                        <label class="custom-control-label small text-muted" for="terms">
+                            Tôi đồng ý với <a href="#" style="color: var(--primary-bakery-color); font-weight: bold;">Điều khoản dịch vụ</a> và <a href="#" style="color: var(--primary-bakery-color); font-weight: bold;">Chính sách bảo mật</a>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-custom-login mb-4">TẠO TÀI KHOẢN</button>
+              </form>
+
+              <div class="text-center">
+                <p class="small text-muted mb-0">
+                  Bạn đã có tài khoản? 
+                  <a href="login.html" style="color: var(--primary-bakery-color); font-weight: bold; font-size: 15px;">Đăng nhập ngay</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="register-wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6"> 
+            
+            <div class="card login-card p-4 p-md-5">
+              
+              <div class="login-header text-center mb-4">
+                <h3>Thành Viên Mới</h3>
+                <p class="text-muted small">Vui lòng điền thông tin bên dưới</p>
+              </div>
+
+              <form action="signup" method="post">
+                
+                <div class="form-group">
+                  <input type="text" class="form-control" name="fullname" placeholder="Họ và tên của bạn" required>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" required>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại liên lạc">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="re-password" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-4 pl-4">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="terms" required>
+                        <label class="custom-control-label small text-muted" for="terms">
+                            Tôi đồng ý với <a href="#" class="link-primary">Điều khoản dịch vụ</a> và <a href="#" class="link-primary">Chính sách bảo mật</a>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-custom-register mb-4">TẠO TÀI KHOẢN</button>
+              </form>
+
+<!--              <div class="text-center">
+                <p class="small text-muted mb-0">
+                  Bạn đã có tài khoản? 
+                  <a href="login.html" class="link-primary">Đăng nhập ngay</a>
+                </p>
+              </div>-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section
+      class="section-cover"
+      data-stellar-background-ratio="0.5"
+      style="
+        background-image: url(https://shopbanghe.vn/wp-content/uploads/2021/06/thi%E1%BA%BFt-k%E1%BA%BF-n%E1%BB%99i-th%E1%BA%A5t-c%E1%BB%ADa-h%C3%A0ng-b%C3%A1nh-ng%E1%BB%8Dt-2.jpg);
+      "
+    >
+      <div class="container">
+        <div class="row justify-content-center align-items-center intro">
+          <div class="col-md-9 text-center element-animate">
+            <h2>Hãy đến trải nghiệm ngay</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <h3>Điện thoại liên hệ</h3>
+
+            <p><i class="icon ion-android-call"></i>&nbsp 0323 093 323</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Kết nối với chúng tôi</h3>
+            <p>
+              <a href="#" class="pl-0 p-3"
+                ><span class="fa fa-facebook"></span
+              ></a>
+              <a href="#" class="p-3"><span class="fa fa-twitter"></span></a>
+              <a href="#" class="p-3"><span class="fa fa-instagram"></span></a>
+              <a href="#" class="p-3"><span class="fa fa-vimeo"></span></a>
+              <a href="#" class="p-3"
+                ><span class="fa fa-youtube-play"></span
+              ></a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Thông điệp</h3>
+            <p>Niềm vui của khách hàng là niềm hạnh phúc của Sugar & Smile.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#f4b214"
+        />
+      </svg>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
