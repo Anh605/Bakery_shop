@@ -94,7 +94,7 @@ public class ConfirmSerlet extends HttpServlet {
                 out.println("<div class='card-footer bg-transparent fw-bold text-end'>Tổng cộng: " + String.format("%,.0f", totalPrice) + " đ</div>");
                 out.println("</div>");
 
-                out.println("<a href='banhlist' class='btn btn-primary mt-4'>⬅ Tiếp tục mua sắm</a>");
+                out.println("<a href='banhlist' class='btn btn-primary mt-4'> Tiếp tục mua sắm</a>");
                 out.println("</div></div></body></html>");
             }
 
