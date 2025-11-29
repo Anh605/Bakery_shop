@@ -39,7 +39,6 @@ public class UpdateStatusServlet extends HttpServlet {
         } catch (ParseException e) {
         }
 
-        // redirect về orderDetail (encode params để an toàn)
         String redirectUrl = "orderDetail?email=" + URLEncoder.encode(email, "UTF-8")
                 + "&time=" + URLEncoder.encode(timeStr, "UTF-8");
         response.sendRedirect(redirectUrl);

@@ -28,19 +28,14 @@ public class ConfirmSerlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         HttpSession session = request.getSession();
-        
-        // 1. Lấy dữ liệu từ Session
         Customer customer = (Customer) session.getAttribute("acc");
         Map<Integer, CartItem> cart = (Map<Integer, CartItem>) session.getAttribute("cart");
-        String note = (String) session.getAttribute("orderNote"); // Lấy ghi chú đã lưu ở BookServlet
-
-        // Kiểm tra hợp lệ
+        String note = (String) session.getAttribute("orderNote"); 
         if (customer == null || cart == null || cart.isEmpty()) {
             response.sendRedirect("banhlist");
             return;
         }
 
-        // 2. LƯU VÀO DATABASE (Logic chuyển từ BookServlet sang)
         BookingDAO bookingDAO = new BookingDAO();
         BillDAO billDAO = new BillDAO();
         List<Booking> savedBookings = new ArrayList<>();
@@ -48,27 +43,19 @@ public class ConfirmSerlet extends HttpServlet {
 
         try {
             for (CartItem item : cart.values()) {
-                // Insert Booking
                 int bookingId = bookingDAO.insertBooking(customer.getId(), item.getBanh().getId(), item.getQuantity(), note, "Cho xac nhan");
                 
                 if (bookingId != -1) {
-                    // Tạo đối tượng Booking để dùng cho Bill và hiển thị
                     Timestamp now = new Timestamp(System.currentTimeMillis());
                     Booking booking = new Booking(bookingId, customer, item.getBanh(), item.getQuantity(), note, now, "Cho xac nhan");
                     savedBookings.add(booking);
-                    
-                    // Insert Bill
                     float subTotal = item.getSubtotal();
                     totalPrice += subTotal;
                     billDAO.insertBill(new Bill(booking, subTotal));
                 }
             }
-            
-            // 3. Xóa giỏ hàng sau khi lưu thành công
             session.removeAttribute("cart");
             session.removeAttribute("orderNote");
-
-            // 4. HIỂN THỊ THÔNG BÁO THÀNH CÔNG (HTML)
             try (PrintWriter out = response.getWriter()) {
                 out.println("<!doctype html><html lang='vi'><head>");
                 out.println("<meta charset='UTF-8'><title>Đặt hàng thành công</title>");

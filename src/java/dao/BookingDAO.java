@@ -12,7 +12,6 @@ public class BookingDAO extends DAO {
         super();
     }
 
-    // Thêm booking
         public int insertBooking(int customerId, int banhId, int quantity, String note, String status) {
         String sql = "INSERT INTO booking (customerId, banhId, quantity, note, orderTime, status) VALUES (?, ?, ?, ?, NOW(), ?)";
         try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -20,7 +19,7 @@ public class BookingDAO extends DAO {
             ps.setInt(2, banhId);
             ps.setInt(3, quantity);
             ps.setString(4, note);
-            ps.setString(5, status);  // Lưu địa chỉ riêng cho booking
+            ps.setString(5, status);  
             int cnt = ps.executeUpdate();
             if (cnt > 0) {
                 ResultSet rs = ps.getGeneratedKeys();
@@ -31,7 +30,7 @@ public class BookingDAO extends DAO {
         return -1;
     }
     
-   // Lấy booking theo bookId
+   // Lay booing theo id
     public Booking getBookingById(int bookId) {
         String sql = "SELECT * FROM booking WHERE bookId=?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
@@ -52,7 +51,7 @@ public class BookingDAO extends DAO {
         return null;
     }
 
-    // Lấy tất cả booking
+    // lay tat ca booking
     public ArrayList<Booking> getAllBooking() {
         ArrayList<Booking> list = new ArrayList<>();
         String sql = "SELECT * FROM booking ORDER BY orderTime";

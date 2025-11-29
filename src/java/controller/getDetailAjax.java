@@ -22,8 +22,6 @@ public class getDetailAjax extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
 
             String id = request.getParameter("id");
-
-            // Kiểm tra đầu vào
             if (id == null || id.trim().isEmpty()) {
                 jo.put("error", "invalid_request");
                 out.print(jo);
@@ -38,8 +36,6 @@ public class getDetailAjax extends HttpServlet {
                 out.print(jo);
                 return;
             }
-
-            // Lấy dữ liệu từ DB
             BanhDAO banhDAO = new BanhDAO();
             Banh banh = banhDAO.getBanhById(banhId);
 

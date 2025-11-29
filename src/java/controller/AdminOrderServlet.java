@@ -25,7 +25,6 @@ public class AdminOrderServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Customer cus = (Customer) session.getAttribute("acc");
 
-        // Kiểm tra quyền admin
         if (cus == null || !"admin".equals(cus.getRole())) {
             response.sendRedirect("index.jsp");
             return;
@@ -34,10 +33,9 @@ public class AdminOrderServlet extends HttpServlet {
         BookingDAO bookingDAO = new BookingDAO();
         BillDAO billDAO = new BillDAO();
 
-        // Lấy tất cả booking
+
         List<Booking> bookings = bookingDAO.getAllBooking();
 
-        // Gom theo email + thời gian đặt hàng 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Map<String, List<Booking>> ordersMap = new LinkedHashMap<>();
         for (Booking b : bookings) {
@@ -46,7 +44,6 @@ public class AdminOrderServlet extends HttpServlet {
             ordersMap.computeIfAbsent(key, k -> new ArrayList<>()).add(b);
         }
 
-        // Chuyển sang list để JSP dễ hiển thị
         List<Map<String, Object>> ordersList = new ArrayList<>();
         for (Map.Entry<String, List<Booking>> entry : ordersMap.entrySet()) {
             List<Booking> list = entry.getValue();
@@ -56,7 +53,6 @@ public class AdminOrderServlet extends HttpServlet {
             order.put("note", list.get(0).getNote());
             order.put("orderTime", list.get(0).getOrderTime());
 
-            // Gom sản phẩm + tổng tiền
             StringBuilder products = new StringBuilder();
             float totalPrice = 0f;
             for (Booking b : list) {

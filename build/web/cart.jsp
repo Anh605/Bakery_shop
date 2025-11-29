@@ -74,7 +74,7 @@
                 <h4>Tổng cộng: <%= String.format("%,.0f", total) %> đ</h4>
                 <div>
                     <a href="<%= request.getContextPath() %>/banhlist" class="btn btn-secondary">Tiếp tục chọn bánh</a>
-                    <a href="booknow.jsp" class="btn btn-primary">Thanh toán</a>
+                    <a href="booknow.jsp" class="btn btn-primary">Đặt hàng</a>
                 </div>
             </div>
         <% } %>

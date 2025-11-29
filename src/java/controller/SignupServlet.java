@@ -17,14 +17,14 @@ public class SignupServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        // Lấy dữ liệu từ form dangky.html
+        // lay du lieu form dangky.html
         String fullname = request.getParameter("fullname");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String password = request.getParameter("password");
         String rePassword = request.getParameter("re-password");
 
-        // Kiểm tra mật khẩu nhập lại
+        // kiem tra mat khau
         if (!password.equals(rePassword)) {
             request.setAttribute("mess", "Mật khẩu nhập lại không khớp!");
             request.getRequestDispatcher("dangky.html").forward(request, response);
@@ -33,8 +33,6 @@ public class SignupServlet extends HttpServlet {
             Customer a = dao.checkAccountExist(email);
             
             if (a == null) {
-                // Được phép đăng ký -> Tạo object Customer mới (Address để trống tạm thời)
-                // Lưu ý: Constructor khớp với Model đã sửa ở Bước 2
                 Customer newCus = new Customer(fullname, email, phone, "", password, "user");
                 dao.insertCustomer(newCus);               
                 response.sendRedirect("index.jsp"); 

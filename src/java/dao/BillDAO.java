@@ -10,7 +10,6 @@ public class BillDAO extends DAO {
         super();
     }
 
-    // Insert bill, trả về billId vừa tạo
     public int insertBill(Bill bill) {
         String sql = "INSERT INTO bill (bookId, totalPrice) VALUES (?, ?)";
         try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -26,7 +25,7 @@ public class BillDAO extends DAO {
         return -1;
     }
 
-    // Lấy bill theo bookId
+    // Lay bill theo bookid
     public Bill getBillByBookingId(int bookId) {
         String sql = "SELECT * FROM bill WHERE bookId=?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {

@@ -15,7 +15,7 @@ public class CustomerDAO extends DAO {
     public CustomerDAO() {
         super();
     }
-    // Kiểm tra đăng nhập
+    // kiem tra dang nhap
     public Customer login(String email, String password) {
         String sql = "SELECT * FROM customers WHERE email = ? AND password = ?";
         try {
@@ -39,7 +39,7 @@ public class CustomerDAO extends DAO {
         return null;
     }
 
-    // Kiểm tra xem email đã tồn tại chưa
+    // kiem tra email da ton tai chua
     public Customer checkAccountExist(String email) {
         String sql = "SELECT * FROM customers WHERE email = ?";
         try {
@@ -61,7 +61,7 @@ public class CustomerDAO extends DAO {
         }
         return null;
     }
-    // Thêm khách hàng mới, trả về id của khách hàng vừa thêm
+    // them khach hang moi
     public int insertCustomer(Customer cus) {
         try {
             String sql = "INSERT INTO customers (customerName, email, tel, address, password, role) VALUES (?, ?, ?, ?, ?, ?)";
@@ -107,7 +107,7 @@ public class CustomerDAO extends DAO {
         }
         return null;
     }
-    // Cập nhật địa chỉ của khách hàng
+    // cap nhat dia chi
     public void updateAddress(int customerId, String address) {
         String sql = "UPDATE customers SET address = ? WHERE customerId = ?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
