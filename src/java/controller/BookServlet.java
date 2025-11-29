@@ -1,6 +1,7 @@
 
 package controller;
 
+import dao.CustomerDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -54,11 +55,14 @@ public class BookServlet extends HttpServlet {
         session.setAttribute("acc", customer);
         
         session.setAttribute("orderNote", note);
+        if (address != null && !address.isEmpty()) {
+        new CustomerDAO().updateAddress(customer.getId(), address);
+}
 
         // 4. Chuyển hướng sang trang Xem lại đơn hàng
         request.getRequestDispatcher("bookconfirm.jsp").forward(request, response);
     }
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
