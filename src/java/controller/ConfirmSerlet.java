@@ -78,7 +78,7 @@ public class ConfirmSerlet extends HttpServlet {
                 out.println("<div class='alert alert-success shadow p-5 rounded'>");
                 out.println("<h1 class='display-4'>🎉</h1>");
                 out.println("<h2>Đặt hàng thành công!</h2>");
-                out.println("<p class='lead'>Cảm ơn <b>" + customer.getName() + "</b>.đã đặt hàng.</p>");
+                out.println("<p class='lead'>Cảm ơn <b>" + customer.getName() + "</b>đã đặt hàng.</p>");
                 
                 out.println("<div class='card mt-4 mx-auto' style='max-width: 600px;'>");
                 out.println("<div class='card-header bg-transparent'>Chi tiết đơn hàng</div>");
