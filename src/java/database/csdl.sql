@@ -72,5 +72,11 @@ create table bill(
 );
 
 ALTER TABLE customers ADD COLUMN password VARCHAR(255);
+ALTER TABLE booking ADD COLUMN orderTime DATETIME DEFAULT CURRENT_TIMESTAMP;
 
 
+ALTER TABLE customers ADD COLUMN role VARCHAR(50) DEFAULT 'user';
+INSERT INTO customers (customerName, email, tel, address, password, role)
+VALUES ('Admin', 'admin@gmail.com', '', '', 'admin', 'admin');
+
+ALTER TABLE booking ADD COLUMN status VARCHAR(50) DEFAULT 'Cho xac nhan';
