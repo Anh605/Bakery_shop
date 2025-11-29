@@ -34,7 +34,11 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("acc", a); // "acc" là biến dùng để check login trên JSP
             session.setMaxInactiveInterval(60 * 60 * 24); // Session tồn tại 1 ngày
-            response.sendRedirect("index.jsp");
+            if ("admin".equals(a.getRole())) {
+                response.sendRedirect("admin"); // Trang quản lý đơn hàng
+            } else {
+                response.sendRedirect("index.jsp"); 
+            }
         }
     }
 
