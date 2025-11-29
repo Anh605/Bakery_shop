@@ -14,24 +14,27 @@ public class Customer {
     private String tel;      
     private String address;  
     private String password;
+    private String role;
 
 
-    public Customer(int id, String name, String email, String tel, String address, String password) {
+    public Customer(int id, String name, String email, String tel, String address, String password, String role) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.tel = tel;
         this.address = address;
         this.password = password;
+        this.role = role;
     }
 
  
-    public Customer(String name, String email, String tel, String address, String password) {
+    public Customer(String name, String email, String tel, String address, String password, String role) {
         this.name = name;
         this.email = email;
         this.tel = tel;
         this.address = address;
         this.password = password;
+        this.role = role;
     }
     
     public int getId() {
@@ -81,13 +84,26 @@ public class Customer {
     public void setPassword(String password){
         this.password = password;
     }
+    
+    public String getRole() { 
+        return role; 
+    }   
+    
+    public void setRole(String role) { 
+        this.role = role; 
+    }
 
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString() {
         return "Customer: " + id +
                ", Name=" + name +
                ", Email=" + email +
                ", Tel=" + tel +
-               ", Address=" + address;
+               ", Address=" + address +
+                ", Role=" + role;
     }
 }
-
