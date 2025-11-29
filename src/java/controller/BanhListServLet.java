@@ -30,6 +30,14 @@ public class BanhListServLet extends HttpServlet {
         request.getRequestDispatcher("banhlist.jsp").forward(request, response);
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
