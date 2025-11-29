@@ -204,7 +204,7 @@
           <div class="col-md-12 text-center">
             <div class="mb-5 element-animate">
               <h1>Liên hệ với chúng tôi</h1>
-              <p>Chũng tôi luôn sẵn sàng phục vụ bạn</p>
+              <p>Chúng tôi luôn sẵn sàng phục vụ bạn</p>
             </div>
           </div>
         </div>
